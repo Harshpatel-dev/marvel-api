@@ -37,7 +37,7 @@ export default function AllComics(props) {
       const MD_GENERATED_STRING = Cryptojs(GeneratedString).toString();
 
       const API_STRING =
-        "http://gateway.marvel.com/v1/public/comics" +
+        "https://gateway.marvel.com/v1/public/comics" +
         "?ts=" +
         TS +
         "&apikey=" +
