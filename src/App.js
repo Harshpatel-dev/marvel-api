@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef, useState } from "react";
+import Navbar from "./Components/Navabar/Navbar";
+import { Main } from "./App.style";
+import { Outlet } from "react-router-dom";
 
 function App() {
+  const mainRef = useRef();
+  const [isReached, setIsReached] = useState(false);
+
+  const handleScroll = (event) => {
+    const { scrollTop, clientHeight, scrollHeight } = event.currentTarget;
+    console.log("scrollTop : ", scrollTop);
+    console.log("clientHeight : ", clientHeight);
+    console.log("scrollHeight : ", scrollHeight);
+
+    if (scrollTop + clientHeight === scrollHeight) {
+      setIsReached(true);
+      console.log("at the bottom");
+    } else {
+      setIsReached(false);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Main onScroll={handleScroll} isReached={isReached}>
+      <Navbar />
+      <Outlet />
+    </Main>
   );
 }
 
