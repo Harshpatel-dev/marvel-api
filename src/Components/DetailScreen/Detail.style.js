@@ -37,8 +37,8 @@ export const FirstContainer = styled.div`
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 30px;
-  width: 100% -30px;
-  height: 550px;
+  width: 100% - 30px;
+  height: 85vh;
   display: flex;
   background-color: black;
   justify-content: space-between;

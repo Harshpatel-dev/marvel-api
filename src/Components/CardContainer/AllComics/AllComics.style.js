@@ -7,7 +7,7 @@ export const CardGrid = styled.div`
   width: 100vw;
   height: 90vh;
   overflow: auto;
-  justify-content: flex-start;
+  justify-content: space-between;
   position: relative;
   opacity: ${(props) => (props.changeOpacity ? 0.1 : 1)};
 `;
