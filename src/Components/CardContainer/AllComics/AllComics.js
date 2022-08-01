@@ -37,7 +37,7 @@ export default function AllComics(props) {
       const MD_GENERATED_STRING = Cryptojs(GeneratedString).toString();
 
       const API_STRING =
-        "https://gateway.marvel.com/v1/public/comics" +
+        "https://gateway.marvel.com/v1/public/events" +
         "?ts=" +
         TS +
         "&apikey=" +
@@ -103,14 +103,16 @@ export default function AllComics(props) {
           comicsArray.map((item, index) => {
             const isImage = item.thumbnail.path.indexOf("image_not_available");
             if (item.title !== "" && isImage == -1) {
-              const imageSize = "/portrait_uncanny.";
-              const imageType = item.thumbnail.extension;
-              const imageSrc = item.thumbnail.path + imageSize + imageType;
+              // const imageSize = "/portrait_uncanny";
+              const imageType = "." + item.thumbnail.extension;
+              // const imageSrc = item.thumbnail.path + imageSize + imageType;
+              const imageSrc = item.thumbnail.path + imageType;
               return (
                 <CardLayout
                   title={item.title}
                   description={item.description}
                   imageSrc={imageSrc}
+                  id={item.id}
                 />
               );
             }

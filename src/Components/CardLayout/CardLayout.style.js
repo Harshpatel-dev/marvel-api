@@ -5,7 +5,7 @@ export const Card = styled.div`
   flex-direction: column;
   position: relative;
   width: 300px;
-  height: 650px;
+  height: 400px;
   margin: 1.2rem;
   -moz-perspective: 200rem;
   perspective: 200rem;
@@ -18,7 +18,7 @@ export const Card = styled.div`
 export const SubCon = styled.div`
   position: relative;
   width: 100%;
-  height: 550px;
+  height: 400px;
 
   &:hover div:first-child {
     transform: ${(props) =>
@@ -100,14 +100,14 @@ export const Image = styled.img`
 
   position: relative;
   width: 100%;
-  height: 450px;
-  object-fit: center;
+  height: 300px;
+  object-fit: fill;
 `;
 
 export const Caption = styled.div`
-  background-color: white;
+  /* background-color: white; */
   overflow: hidden;
-  height: calc(100% - 450px);
+  height: calc(100% - 300px);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -128,11 +128,11 @@ export const Content = styled.div`
     font-size: 1rem;
     text-transform: capitalize;
     font-weight: bold;
-    color: black;
+    color: white;
   }
   small {
     font-size: 12px;
-    color: black;
+    color: white;
   }
 `;
 

@@ -102,6 +102,7 @@ export default function SearchedComics() {
                 title={item.name}
                 description={item.description}
                 imageSrc={imageSrc}
+                id={item.id}
               />
             );
           }

@@ -11,7 +11,7 @@ import {
 } from "./CardLayout.style";
 import { Link } from "react-router-dom";
 
-export default function CardLayout({ title, description, imageSrc }) {
+export default function CardLayout({ title, description, imageSrc, id }) {
   return (
     <Card>
       <SubCon
@@ -25,12 +25,12 @@ export default function CardLayout({ title, description, imageSrc }) {
       >
         <Card_Front__Part>
           <Image src={imageSrc} alt="Image" />
-          <Caption>
+          {/* <Caption>
             <Content>
               <span>{title}</span>
-              {/* <small>{description}</small> */}
+              <small>{description}</small>
             </Content>
-          </Caption>
+          </Caption> */}
         </Card_Front__Part>
 
         <Card_Back__Part isAvail={description ? true : false}>
@@ -39,7 +39,7 @@ export default function CardLayout({ title, description, imageSrc }) {
         </Card_Back__Part>
       </SubCon>
 
-      <Link to={`./detail/${title}`}>
+      <Link to={`/detail/${title}/${id}`}>
         <MoreDetails>
           <span> More Detials </span>
         </MoreDetails>

@@ -15,7 +15,7 @@ ReactDOM.render(
       <Route path="/" element={<App />}>
         <Route path="" element={<AllComics />} />
         <Route path=":id" element={<SearchedComics />} />
-        <Route path="detail/:id" element={<DetailScreen />} />
+        <Route path="detail/:name/:id" element={<DetailScreen />} />
         {/* localhost::300/spider/detail */}
       </Route>
     </Routes>

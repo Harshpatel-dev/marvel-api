@@ -23,6 +23,7 @@ export const Nav = styled.div`
 export const Logo = styled.div`
   font-weight: 800;
   font-size: 2.5rem;
+  color: khaki ;
 
   span {
     font-size: 1.8rem;
@@ -152,6 +153,6 @@ export const MenuLink = styled.a`
   font-size: 0.9rem;
 
   &:hover {
-    color: #7b7fda;
+    /* color: #7b7fda; */
   }
 `;
